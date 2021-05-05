@@ -9,7 +9,7 @@ export class TodosComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log('----TodosComponent----');
+    
   }
   addTodo() {}
 }

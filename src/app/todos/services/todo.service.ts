@@ -22,8 +22,7 @@ import { combineLatest } from 'rxjs';
 @Injectable()
 export class TodoService {
   constructor(private store: StoreService) {
-    console.log('---construct---todoService');
-
+    //search effect
     store.action$
       .whereType(ActionTypes.SEARCH_INPUT)
       .pipe(
