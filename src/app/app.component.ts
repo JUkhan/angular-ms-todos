@@ -8,8 +8,11 @@ import { StoreService } from './services/store.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  states:any={}
   constructor(store: StoreService) {
-    store.select((state) => state).subscribe(console.log);
+    store.select((state) => state).subscribe(s=>{
+      this.states=JSON.stringify(s, null, 2)
+    });
     store.dispatcher$.subscribe(console.log);
   }
   title = 'mono-state-app';
