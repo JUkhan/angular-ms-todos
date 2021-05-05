@@ -14,7 +14,9 @@ export class CounterComponent implements OnInit, OnDestroy {
     this.store.dispatch('inc');
   }
   ngOnInit(): void {
+    setTimeout(()=>{
     this.store.registerState(counterState);
+    },0)
   }
   ngOnDestroy(): void {
     this.store.unregisterState('counter');
