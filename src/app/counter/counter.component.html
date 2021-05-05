@@ -1,0 +1,8 @@
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <button (click)="store.dispatch('inc')" type="button" class="btn btn-danger">+</button>
+  <button (click)="store.dispatch('dec')" type="button" class="btn btn-warning">-</button>
+  <button (click)="store.dispatch('asyncInc')" type="button" class="btn btn-success">Async(+)</button>
+  <button type="button" class="btn  btn-info">
+    <div *ngIf="counter$|async as state">{{state?.loading ? "Loading..." : state?.count}}</div>
+  </button>
+</div>

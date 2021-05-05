@@ -1,0 +1,3 @@
+<input #elm appFocus (keyup.enter)="submit()" class="form-control {{inputCSS}}" type="text" [value]="description"
+    (blur)="blurHandler()" (input)="textChange(elm.value)"
+    placeholder="{{isSearching ? 'Search todos' : 'What needs to be done?'}}" />

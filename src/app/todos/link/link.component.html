@@ -1,0 +1,4 @@
+<button class="ms-2 btn btn-outline-warning btn-sm {{(active$|async)===+searchCategory?'active':''}}"
+    (click)="changeTodoFilter()">
+    <ng-content></ng-content>
+</button>

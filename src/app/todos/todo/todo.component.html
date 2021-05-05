@@ -1,0 +1,19 @@
+<div class="d-flex p-2">
+    <div class="flex-grow-1 px-2">
+        <div class="d-flex">
+            <input class="form-check-input me-2 mt-2" type="checkbox" [checked]="todo.completed" #inputCom
+                (change)="update(inputCom.checked)">
+            <span class="mt-1" style="cursor: pointer;" (dblclick)="isDblclick=true" *ngIf="!isDblclick else edit">
+                {{todo?.description}}
+            </span>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-outline-danger btn-sm" (click)="removeTodo()">Remove</button>
+    </div>
+</div>
+<ng-template #edit>
+    <app-todo-input class="flex-grow-1" inputCSS="form-control-sm" [description]="todo.description"
+        (onBlur)="blurHandler()" (handleSubmit)="submit($event)">
+    </app-todo-input>
+</ng-template>

@@ -1,0 +1,7 @@
+<div class="d-flex">
+  <app-todo-input class="flex-grow-1" [description]="description" (changeValue)="handleInputChange($event)"
+    (handleSubmit)="handleSubmit($event)" [isSearching]="isSearching"></app-todo-input>
+
+  <button (click)="changeInputMode()" type="button" class="btn btn-outline-light ms-2">🔎</button>
+
+</div>
